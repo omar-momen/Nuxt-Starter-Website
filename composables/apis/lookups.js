@@ -4,34 +4,40 @@ export const lookupsService = () => {
 
   return {
     async get_all_cats() {
-      const { data, error } = await useApi("get_all_cats");
+      const { data, error, status } = await useMyFetch("get_all_cats", {
+        method: "GET",
+      });
 
       if (error.value) {
-        return toast.add({
+        toast.add({
           color: "red",
-          id: `get_cats_failed`,
+          id: "get_cat_failed",
           title: getError(error.value),
         });
+        return { data: null, error, status };
       }
 
-      return data?.value?.data;
+      return { data: data, error, status };
     },
 
     async get_sub_cat_properties(subCategoryId) {
-      let data;
+      const { data, error, loading } = await useDollarFetch(
+        "properties?cat=" + subCategoryId,
+        {
+          method: "GET",
+        }
+      );
 
-      try {
-        data = await $dollarfetch("properties?cat=" + subCategoryId);
-      } catch (error) {
+      if (error.value) {
         toast.add({
           color: "red",
-          id: "get_properties_failed",
-          title: getError(error),
+          id: "get_sub_cat_failed",
+          title: getError(error.value),
         });
-        return 0;
+        return { data: null, error, loading };
       }
 
-      return data?.data;
+      return { data: data, error, loading };
     },
   };
 };

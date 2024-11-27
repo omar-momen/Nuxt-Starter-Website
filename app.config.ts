@@ -4,7 +4,8 @@ export default defineAppConfig({
     gray: "neutral",
 
     input: {
-      rounded: "rounded-xl",
+      rounded: "rounded-md",
+      base: "min-w-36",
     },
 
     container: {

@@ -1,17 +1,21 @@
 export const settingsService = () => {
   return {
     async getSettings() {
-      const { data, error } = await useApi(`member/general/settings`);
+      const { data, error, status } = await useMyFetch(
+        `member/general/settings`
+      );
 
       if (error.value) {
-        return toast.add({
+        toast.add({
           color: "red",
           id: "get_settings_failed",
           title: getError(error.value),
         });
+
+        return { data: null, error, status };
       }
 
-      return data?.value?.data;
+      return { data, error, status };
     },
   };
 };

@@ -4,7 +4,7 @@
     <div class="layout-wrapper">
       <NuxtLayout>
         <PageLoader v-if="appStore?.pageLoading" />
-        <div class="page-wrapper md:py-16 py-6">
+        <div class="page-wrapper">
           <NuxtPage />
         </div>
         <NuxtLoadingIndicator />
@@ -33,24 +33,20 @@ useHead({
     {
       name: "description",
       content:
-        "Shop online in Egypt with Mazzadyand enjoy low prices, fast shipping, cash on delivery and easy returns on millions of items. Explore deals on electronics, fashion, groceries, home …",
+        "نحن شركة تقنية سعودية متخصصة فى تقديم حلول مبتكرة فى مجال البرمجة وتطوير المواقع والتطبيقات الإلكترونية. نهدف إلى تقديم خدمات متكاملة لعملائنا من خلال الجمع بين الإبداع التقني والجودة العالية لتلبية احتياجات السوق المتغيرة باستمرار.",
     },
     {
       name: "author",
-      content: "Mazzady",
-    },
-    {
-      name: "keywords",
-      content: "BYE",
+      content: "Fintora",
     },
     {
       property: "og:title",
-      content: "Mazzady",
+      content: "Fintora",
     },
     {
       property: "og:descreption",
       content:
-        "Shop online in Egypt with Amazon.eg and enjoy low prices, fast shipping, cash on delivery and easy returns on millions of items. Explore deals on electronics, fashion, groceries, home …",
+        "نحن شركة تقنية سعودية متخصصة فى تقديم حلول مبتكرة فى مجال البرمجة وتطوير المواقع والتطبيقات الإلكترونية. نهدف إلى تقديم خدمات متكاملة لعملائنا من خلال الجمع بين الإبداع التقني والجودة العالية لتلبية احتياجات السوق المتغيرة باستمرار.",
     },
     {
       property: "og:type",
@@ -62,17 +58,18 @@ useHead({
     },
     {
       property: "og:url",
-      content: "https://mazzady-task.vercel.app/",
+      content: "https://tenjaz-task.vercel.app/",
     },
 
+    // Twitter
     {
       property: "twitter:title",
-      content: "Mazzady",
+      content: "Fintora",
     },
     {
       property: "twitter:descreption",
       content:
-        "Shop online in Egypt with Amazon.eg and enjoy low prices, fast shipping, cash on delivery and easy returns on millions of items. Explore deals on electronics, fashion, groceries, home …",
+        "نحن شركة تقنية سعودية متخصصة فى تقديم حلول مبتكرة فى مجال البرمجة وتطوير المواقع والتطبيقات الإلكترونية. نهدف إلى تقديم خدمات متكاملة لعملائنا من خلال الجمع بين الإبداع التقني والجودة العالية لتلبية احتياجات السوق المتغيرة باستمرار.",
     },
     {
       property: "twitter:type",
@@ -84,7 +81,7 @@ useHead({
     },
     {
       property: "twitter:url",
-      content: "https://mazzady-task.vercel.app/",
+      content: "https://tenjaz-task.vercel.app/",
     },
   ],
 });

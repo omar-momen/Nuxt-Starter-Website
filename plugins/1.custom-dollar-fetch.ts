@@ -28,10 +28,10 @@ const handleUnAuthunticated = async (
     auth_store.user
   ) {
     await nuxtApp.$Swal.fire({
-      title: useLayerHelpers().capitalizeEveryWord(
+      title: useHelpers().capitalizeEveryWord(
         nuxtApp.$i18n.t("alerts.logout.title")
       ),
-      text: useLayerHelpers().capitalizeEveryWord(
+      text: useHelpers().capitalizeEveryWord(
         nuxtApp.$i18n.t("alerts.logout.text")
       ),
       icon: "warning",
@@ -79,25 +79,24 @@ export default defineNuxtPlugin((nuxtApp) => {
   const dollarfetch = $fetch.create({
     baseURL: appConfig.public.apiBase,
     onRequest({ request, options, error }) {
-      const headers = (options.headers ||= {});
+      const headers = options?.headers as unknown as Record<string, string>;
 
       // Set the Authorization header && Accept-Language
       if (Array.isArray(headers)) {
         if (token.value) {
           headers.push(["Authorization", `Bearer ${token.value}`]);
-          headers.push(["private-key", token.value]); // temp
         }
         headers.push(["Accept-Language", locale.value]);
       } else if (headers instanceof Headers) {
         if (token.value) {
           headers.set("Authorization", `Bearer ${token.value}`);
-          headers.set("private-key", token.value); // temp
         }
-        headers.set("Accept-Language", locale.value);
+        headers.set("Accept-Language", locale.value as string);
       } else {
         if (token.value) {
-          headers.Authorization = `Bearer ${token.value}`;
-          headers["private-key"] = token.value; // temp
+          (
+            headers as Record<string, string>
+          ).Authorization = `Bearer ${token.value}`;
         }
         headers["Accept-Language"] = locale.value;
       }

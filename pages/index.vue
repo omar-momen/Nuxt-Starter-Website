@@ -1,6 +1,6 @@
 <template>
   <div class="index-page">
-    <UContainer class="flex flex-col md:flex-row gap-6">
+    <UContainer>
       <h1>Home Page</h1>
     </UContainer>
   </div>

@@ -5,11 +5,6 @@
         $t("links.home")
       }}</NuxtLink>
     </li>
-    <li>
-      <NuxtLink :to="localePath('/about')" aria-label="go-to-about-page">{{
-        $t("links.about")
-      }}</NuxtLink>
-    </li>
   </ul>
 </template>
 
@@ -20,7 +15,7 @@ const localePath = useLocalePath();
 
 <style lang="postcss" scoped>
 li a {
-  @apply text-darkColor-400 font-bold text-lg relative;
+  @apply text-darkColor-400 font-bold text-lg relative transition-all hover:text-primary-700;
 
   &.router-link-exact-active {
     @apply text-primary-700 after:content-[''] after:block after:w-full after:h-[6px] after:bg-primary-700 after:rounded-t-2xl after:absolute after:-bottom-[22px] after:left-0;

@@ -10,6 +10,10 @@ export default defineNuxtPlugin((nuxtApp) => {
   const authStore = useAuthStore();
   authStore.handleFirstLoad();
 
+  // User
+  const userStore = useUserStore();
+  // userStore.getUserPermissions();
+
   nuxtApp.hook("app:mounted", async () => {
     // Handle Resize
     appStore.optimizedResize();

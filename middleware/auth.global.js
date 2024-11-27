@@ -24,7 +24,6 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
       return navigateTo("/authentication/login");
     }
   }
-
   if (to.path.includes("authentication") && token.value) {
     return navigateTo("/");
   }

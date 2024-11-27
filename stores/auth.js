@@ -1,11 +1,7 @@
 export const useAuthStore = defineStore("auth", () => {
-  const is_first_visit = ref(false);
-
-  const verify_code = ref(null);
-  const verify_phone_value = ref(null);
-
   const user = ref(null);
   const token = useCookie("token");
+  const is_first_visit = ref(false);
 
   // ======== Handle First Load
   const handleFirstLoad = async () => {
@@ -27,30 +23,6 @@ export const useAuthStore = defineStore("auth", () => {
     localStorage.removeItem("Blank_App_User");
   };
 
-  // ======== Verify Phone
-  const verifyPhoneNumber = async (
-    phone,
-    forgetPass = false,
-    resend = false
-  ) => {
-    const data = await authService().verifyPhoneNumber(
-      phone,
-      forgetPass,
-      resend
-    );
-    verify_phone_value.value = phone;
-    return data;
-  };
-  const confirmPhoneNumber = async (code, forgetPass = false) => {
-    const data = await authService().confirmPhoneNumber(
-      verify_phone_value.value,
-      code,
-      forgetPass
-    );
-    verify_code.value = code;
-    return data;
-  };
-
   // ======== Main Actions
   const logIn = async (loginData, fakeLogin = false) => {
     if (fakeLogin) {
@@ -64,26 +36,6 @@ export const useAuthStore = defineStore("auth", () => {
       return navigateTo("/");
     }
     return user;
-  };
-  const forgetPassword = async (phone) => {
-    const data = await authService().forgetPassword(phone);
-    verify_phone_value.value = phone;
-    return data;
-  };
-  const resetPassowrd = async (new_password) => {
-    const data = await authService().resetPassowrd(
-      verify_phone_value.value,
-      verify_code.value,
-      new_password
-    );
-
-    if (data) {
-      // reset values
-      verify_phone_value.value = null;
-      verify_code.value = null;
-    }
-
-    return data;
   };
 
   const logOut = async (fakeLogin = false) => {
@@ -99,33 +51,11 @@ export const useAuthStore = defineStore("auth", () => {
     }
   };
 
-  const signup = async (signupData) => {
-    const body = {
-      ...signupData,
-    };
-    const user = await authService().signup(body);
-    if (user) {
-      // reset values
-      verify_phone_value.value = null;
-      verify_code.value = null;
-    }
-    return user;
-  };
-
   return {
-    verifyPhoneNumber,
-    confirmPhoneNumber,
-
     logIn,
-    forgetPassword,
-    resetPassowrd,
     logOut,
-    signup,
-
-    user,
     is_first_visit,
-    verify_phone_value,
-    verify_code,
+    user,
 
     handleFirstLoad,
 

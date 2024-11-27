@@ -11,12 +11,9 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/i18n",
     "@pinia/nuxt",
-    "@vueuse/nuxt",
     "@nuxt/fonts",
     "@nuxt/test-utils/module",
   ],
-
-  extends: ["github:omar-momen/Nuxt_3_Base_Layer"],
 
   css: ["@/assets/css/main.postcss"],
 
@@ -50,6 +47,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBase: "",
+      privateKey: "",
       googleMapsApiKey: "",
     },
   },
@@ -61,5 +59,5 @@ export default defineNuxtConfig({
 
   components: [{ path: "~/components", pathPrefix: false }],
 
-  compatibilityDate: "2024-07-20",
+  compatibilityDate: "2024-10-25",
 });

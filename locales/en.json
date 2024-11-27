@@ -1,41 +1,49 @@
 {
   "app": {
-    "title": "Mazaady-Task"
+    "title": "Fintora"
   },
 
   "links": {
     "home": "Home",
-    "about": "about"
+    "tasks": "Tasks"
   },
 
-  "navbar": {
-    "add_new_product": "Add New Product"
+  "form": {
+    "add": "Add",
+    "edit": "Edit",
+    "save": "Save",
+    "export": "Export",
+    "reload": "Reload",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "search": "Search",
+    "reset": "Reset",
+    "filter": "Filter",
+    "clear": "Clear",
+    "select": "Select",
+    "upload": "Upload",
+    "download": "Download",
+    "copy": "Copy",
+    "paste": "Paste",
+    "cut": "Cut",
+    "undo": "Undo",
+    "redo": "Redo",
+    "next": "Next",
+    "prev": "Previous",
+    "finish": "Finish",
+    "close": "Close",
+    "open": "Open",
+    "confirm_delete": "Are you sure you want to delete this item?"
   },
 
-  "user_info": {
-    "following": "Following",
-    "followers": "Followers",
-    "rate": "Rate",
-
-    "follow": "Follow"
-  },
-
-  "qr": {
-    "title": "QR Code",
-    "para": "Download the QR code or share it with yourfriends.",
-    "follow_us": "Follow Us on Mazaady"
-  },
-
-  "products": {
-    "title": "Products"
-  },
-
-  "product": {
-    "starting_price": "Starting Price",
-    "lot_starts_in": "Lot Starts In",
-    "days": "Days",
-    "hours": "Hours",
-    "minutes": "Minutes"
+  "CRUDS": {
+    "tasks": {
+      "title": "Tasks",
+      "single": "Task"
+    }
   },
 
   "pages": {
@@ -60,6 +68,44 @@
         "desc": "An unexpected error has occurred. Please try again later.",
         "btn": "Try Later"
       }
+    },
+    "tasks": {
+      "title": "Tasks"
+    }
+  },
+
+  "validation": {
+    "required": "is required",
+    "email": "is not a valid email"
+  },
+
+  "labels": {
+    "upload": "Upload",
+    "choose": "Choose",
+    "enter": "Enter",
+    "search_with": "Search With ",
+    "name": "Name",
+    "description": "Description",
+    "status": "Status",
+    "created_at": "Created At",
+    "updated_at": "Updated At",
+    "image": "Image",
+    "is_active": "Is Active",
+    "lesson": "Lesson",
+    "tickets": "Tickets",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female"
+  },
+
+  "table": {
+    "actions": "Actions",
+    "per_page": "Per Page",
+    "num_of_rows": "Showing {from} to {to} of {total} entries",
+    "no_data": {
+      "title": "No data available",
+      "desc": "There is no data to display.",
+      "btn": "Reload"
     }
   }
 }
