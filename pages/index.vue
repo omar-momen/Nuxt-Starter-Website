@@ -1,8 +1,11 @@
 <template>
   <div class="index-page">
-    <UContainer>
-      <h1>Home Page</h1>
-    </UContainer>
+    <HeroSection />
+    <AboutSection class="py-6 lg:py-24" />
+    <HowWeWorkSection class="py-6 lg:py-24" />
+    <CalendarCoursesSection
+      class="py-6 lg:py-24 bg-[#F9FAFB] dark:bg-transparent"
+    />
   </div>
 </template>
 

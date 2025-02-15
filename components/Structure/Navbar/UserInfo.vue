@@ -6,6 +6,7 @@
       class="h-[30px] md:h-[40px] w-[30px] md:w-[40px] rounded-full"
       src="https://placehold.co/40x40"
       alt="User Image"
+      format="webp"
     />
     <div class="flex flex-col">
       <h5 class="text-sm">Omar Momen</h5>

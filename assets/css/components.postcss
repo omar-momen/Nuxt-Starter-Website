@@ -1,0 +1,19 @@
+@layer components {
+  .cool-button {
+    @apply rounded-3xl bg-coolButton p-3 text-whiteColor text-sm font-normal;
+    box-shadow: inset 0 0 9px 1px #222c3dfc;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: inset 0 0 20px 1px #313d52fc;
+    }
+
+    &.colored {
+      box-shadow: inset 0 0 9px 1px #222c3dfc, 1px 0px 1px 0px #dd4c5c;
+
+      &:hover {
+        box-shadow: inset 0 0 20px 1px #313d52fc, -1px 0px 1px 0px #dd4c5c;
+      }
+    }
+  }
+}

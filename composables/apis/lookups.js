@@ -1,6 +1,5 @@
 export const lookupsService = () => {
   const toast = useToast();
-  const { $dollarfetch } = useNuxtApp();
 
   return {
     async get_all_cats() {

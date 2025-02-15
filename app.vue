@@ -1,6 +1,7 @@
 <template>
   <div class="app">
     <AppLoader v-if="appStore?.appInitLoading" />
+
     <div class="layout-wrapper">
       <NuxtLayout>
         <PageLoader v-if="appStore?.pageLoading" />
@@ -32,21 +33,19 @@ useHead({
     },
     {
       name: "description",
-      content:
-        "نحن شركة تقنية سعودية متخصصة فى تقديم حلول مبتكرة فى مجال البرمجة وتطوير المواقع والتطبيقات الإلكترونية. نهدف إلى تقديم خدمات متكاملة لعملائنا من خلال الجمع بين الإبداع التقني والجودة العالية لتلبية احتياجات السوق المتغيرة باستمرار.",
+      content: nuxtApp.$i18n.t("app.desc"),
     },
     {
       name: "author",
-      content: "Fintora",
+      content: nuxtApp.$i18n.t("app.title"),
     },
     {
       property: "og:title",
-      content: "Fintora",
+      content: nuxtApp.$i18n.t("app.title"),
     },
     {
       property: "og:descreption",
-      content:
-        "نحن شركة تقنية سعودية متخصصة فى تقديم حلول مبتكرة فى مجال البرمجة وتطوير المواقع والتطبيقات الإلكترونية. نهدف إلى تقديم خدمات متكاملة لعملائنا من خلال الجمع بين الإبداع التقني والجودة العالية لتلبية احتياجات السوق المتغيرة باستمرار.",
+      content: nuxtApp.$i18n.t("app.desc"),
     },
     {
       property: "og:type",
@@ -54,22 +53,21 @@ useHead({
     },
     {
       property: "og:image",
-      content: "/images/logo.png",
+      content: "/images/logo/logo-big.png",
     },
     {
       property: "og:url",
-      content: "https://tenjaz-task.vercel.app/",
+      content: "https://arweqh-task.vercel.app/",
     },
 
     // Twitter
     {
       property: "twitter:title",
-      content: "Fintora",
+      content: nuxtApp.$i18n.t("app.title"),
     },
     {
       property: "twitter:descreption",
-      content:
-        "نحن شركة تقنية سعودية متخصصة فى تقديم حلول مبتكرة فى مجال البرمجة وتطوير المواقع والتطبيقات الإلكترونية. نهدف إلى تقديم خدمات متكاملة لعملائنا من خلال الجمع بين الإبداع التقني والجودة العالية لتلبية احتياجات السوق المتغيرة باستمرار.",
+      content: nuxtApp.$i18n.t("app.desc"),
     },
     {
       property: "twitter:type",
@@ -77,11 +75,11 @@ useHead({
     },
     {
       property: "twitter:image",
-      content: "/images/logo.png",
+      content: "/images/logo/logo-big.png",
     },
     {
       property: "twitter:url",
-      content: "https://tenjaz-task.vercel.app/",
+      content: nuxtApp.$i18n.t("app.title"),
     },
   ],
 });

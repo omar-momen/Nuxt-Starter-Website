@@ -1,24 +1,21 @@
 <template>
   <div class="default-layout">
     <TheNavbar />
-    <div class="inside-view pt-[var(--navbar-height)]">
+    <div class="pages-container">
       <slot />
     </div>
     <TheFooter />
   </div>
 </template>
 
-<script setup lang="ts">
-const sideBarlinks = [
-  {
-    label: "Home",
-    icon: "i-heroicons-chart-bar",
-    to: "/",
-  },
-  {
-    label: "Users",
-    icon: "i-heroicons-users",
-    to: "/users",
-  },
-];
+<script setup>
+import TheFooter from "~/components/Structure/TheFooter.vue";
+
+const route = useRoute();
 </script>
+
+<style lang="postcss" scoped>
+.pages-container {
+  padding-top: calc(var(--navbar-height) + 2rem);
+}
+</style>

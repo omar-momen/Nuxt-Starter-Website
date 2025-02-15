@@ -11,10 +11,10 @@
   @apply w-12 h-12 rounded-full;
   background: conic-gradient(
     from 0deg at 50% 50%,
-    #119f49,
-    #dbfde8,
-    #f0fdf4,
-    #119f49
+    #d93749,
+    #fbd0d0,
+    #fde7e6,
+    #d93749
   );
   animation: spin 1.5s linear infinite;
 }

@@ -13,6 +13,8 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxt/fonts",
     "@nuxt/test-utils/module",
+    "@vueuse/nuxt",
+    "@nuxt/eslint",
   ],
 
   css: ["@/assets/css/main.postcss"],

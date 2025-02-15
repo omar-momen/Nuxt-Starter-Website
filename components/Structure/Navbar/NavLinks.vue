@@ -1,24 +1,36 @@
 <template>
   <ul @click="emit('close')">
-    <li>
-      <NuxtLink :to="localePath('/')" aria-label="go-to-home-page">{{
-        $t("links.home")
-      }}</NuxtLink>
+    <li v-for="link in links" :key="link.name">
+      <NuxtLink :to="localePath(link.path)" aria-label="go-to-home-page">
+        {{ $t(`links.${link.name}`) }}
+      </NuxtLink>
     </li>
   </ul>
 </template>
 
 <script setup lang="ts">
 const emit = defineEmits(["close"]);
+
+const links = ref([
+  { name: "home", path: "/" },
+  // { name: "about-us", path: "/about" },
+  // { name: "posts", path: "/posts" },
+  // { name: "become-partner", path: "/become-partner" },
+  // { name: "teams", path: "/teams" },
+  // { name: "bog", path: "/bog" },
+]);
+
 const localePath = useLocalePath();
 </script>
 
 <style lang="postcss" scoped>
-li a {
-  @apply text-darkColor-400 font-bold text-lg relative transition-all hover:text-primary-700;
+li {
+  a {
+    @apply font-medium text-base capitalize transition-all hover:text-primary;
 
-  &.router-link-exact-active {
-    @apply text-primary-700 after:content-[''] after:block after:w-full after:h-[6px] after:bg-primary-700 after:rounded-t-2xl after:absolute after:-bottom-[22px] after:left-0;
+    &.router-link-exact-active {
+      @apply text-primary font-bold;
+    }
   }
 }
 </style>

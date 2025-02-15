@@ -1,7 +1,6 @@
 export const userService = () => {
   const nuxtApp = useNuxtApp();
   const locale = nuxtApp?.$i18n?.locale;
-  const $dollarfetch = nuxtApp.$dollarfetch;
 
   return {
     async getProfile() {
@@ -87,7 +86,7 @@ export const userService = () => {
       const { data, error, loading } = await useDollarFetch(
         `member/profile/delete-image`,
         {
-          method: "POST",
+          method: "DELETE",
         }
       );
 

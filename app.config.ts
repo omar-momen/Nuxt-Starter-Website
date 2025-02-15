@@ -4,23 +4,36 @@ export default defineAppConfig({
     gray: "neutral",
 
     input: {
-      rounded: "rounded-md",
-      base: "min-w-36",
+      rounded: "rounded-xl",
+      base: "min-w-36 h-14 ps-5 text-base font-normal text-darkColor dark:text-whiteColor",
+      placeholder: "placeholder-darkColor dark:placeholder-whiteColor",
     },
 
     container: {
-      padding: "px-4",
+      padding: "lg:px-28",
+      constrained: "max-w-[auto]",
     },
 
     slideover: {
       wrapper: "z-[9999]",
     },
 
+    modal: {
+      wrapper: "z-[999]",
+      overlay: {
+        background: "bg-[#1A1A1AAD] backdrop-blur-md",
+      },
+    },
+
+    notifications: {
+      wrapper: "z-[9999]",
+    },
+
     button: {
       color: {
-        default: {
+        primary: {
           solid:
-            "rounded-xl text-whiteColor bg-gradient-to-r from-primary-700 to-secondary-500 text-md",
+            "rounded-2xl text-whiteColor bg-primary text-base font-semibold py-4 px-10 capitalize",
         },
       },
     },

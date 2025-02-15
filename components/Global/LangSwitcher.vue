@@ -1,18 +1,16 @@
 <template>
-  <div @click="chnageLang" class="group/all items-center cursor-pointer">
-    <span class="pe-3 border-e-2 border-gray-300">
-      <Icon
-        class="group-hover/all:animate-bounce"
-        size="24"
-        name="mynaui:globe"
-      />
-    </span>
-    <span class="ps-3 text-lg font-bold uppercase"> {{ lang }} </span>
+  <div @click="chnageLang">
+    <button
+      class="cool-button rounded-full flex items-center justify-center capitalize gap-[2px]"
+    >
+      {{ lang === "en" ? "ar" : "en" }}
+      <ArrowDown />
+    </button>
   </div>
 </template>
 
 <script lang="ts" setup>
-const { locales, locale, setLocale } = useI18n();
+const { locale, setLocale } = useI18n();
 
 const lang = computed({
   get: () => locale.value,

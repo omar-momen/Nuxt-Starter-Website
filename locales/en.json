@@ -1,11 +1,12 @@
 {
   "app": {
-    "title": "Fintora"
+    "title": "Fintora",
+    "desc": "We are a technology company specialized in providing innovative solutions in the field of programming and developing websites and electronic applications. We aim to provide integrated services to our customers by combining technical creativity and high quality to meet the constantly changing market needs."
   },
 
   "links": {
     "home": "Home",
-    "tasks": "Tasks"
+    "about": "About"
   },
 
   "form": {
@@ -39,13 +40,6 @@
     "confirm_delete": "Are you sure you want to delete this item?"
   },
 
-  "CRUDS": {
-    "tasks": {
-      "title": "Tasks",
-      "single": "Task"
-    }
-  },
-
   "pages": {
     "error": {
       "notFound": {
@@ -68,9 +62,6 @@
         "desc": "An unexpected error has occurred. Please try again later.",
         "btn": "Try Later"
       }
-    },
-    "tasks": {
-      "title": "Tasks"
     }
   },
 

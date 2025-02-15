@@ -1,12 +1,15 @@
 <template>
   <div clas="error-page">
     <main class="main">
-      <div class="wrapper">
+      <div
+        class="wrapper flex flex-col gap-3 items-center justify-center h-screen"
+      >
         <NuxtImg
           width="300"
           height="300"
           :src="imgSrc"
           :alt="error?.statusCode + ' error'"
+          format="webp"
         />
 
         <h1>{{ title }}</h1>
@@ -14,7 +17,7 @@
           {{ errorDescription }}
         </p>
 
-        <UButton aria-label="Handel Error" @click="handleError">{{
+        <UButton aria-label="Handel Error" class="mt-5" @click="handleError">{{
           btn
         }}</UButton>
       </div>

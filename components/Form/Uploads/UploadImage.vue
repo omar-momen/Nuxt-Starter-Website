@@ -50,6 +50,7 @@ const handleFileChange = (event: Event) => {
           width="300"
           height="300"
           :src="model"
+          format="webp"
         />
         <NuxtImg
           v-else
@@ -57,6 +58,7 @@ const handleFileChange = (event: Event) => {
           width="300"
           height="300"
           :src="file.url"
+          format="webp"
         />
       </div>
 

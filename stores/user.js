@@ -2,10 +2,7 @@ export const useUserStore = defineStore("user", () => {
   // Permissions
   const permissions = ref([
     // TEMP
-    "tasks-create",
-    "tasks-read",
-    "tasks-update",
-    "tasks-delete",
+    "contact-us",
   ]);
   const getUserPermissions = async () => {
     const { data, error, status } = await userService().getUserPermissions();

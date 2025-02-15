@@ -1,27 +1,23 @@
 <template>
   <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
+    width="25"
+    height="25"
+    viewBox="0 0 25 25"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M3 7H21"
-      stroke="#333333"
+      d="M3.46582 7.31934H21.4658"
       stroke-width="1.5"
       stroke-linecap="round"
     />
     <path
-      opacity="0.34"
-      d="M3 12H21"
-      stroke="#333333"
+      d="M3.46582 12.3193H21.4658"
       stroke-width="1.5"
       stroke-linecap="round"
     />
     <path
-      d="M3 17H21"
-      stroke="#333333"
+      d="M3.46582 17.3193H21.4658"
       stroke-width="1.5"
       stroke-linecap="round"
     />
